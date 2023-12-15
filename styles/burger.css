@@ -1,0 +1,125 @@
+.burger-btn {
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 10px;
+  background: url(../resources/burger-line1.jpg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.burger {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.burger_open {
+  opacity: 1;
+  visibility: visible;
+}
+.burger__content {
+  width: 274px;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 80px 30px;
+  transition: transform 0.3s linear;
+  transform: translateX(100%);
+}
+.burger_open .burger__content {
+  transform: translateX(0);
+}
+.burger__logo {
+  width: 156px;
+  height: 26px;
+  margin-bottom: 50px;
+}
+.burger__nav {
+  margin-bottom: 90px;
+}
+.burger__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.burger__link {
+  text-decoration: none;
+  font-size: 25px;
+  line-height: normal;
+  letter-spacing: -0.75px;
+  text-transform: uppercase;
+  color: #000;
+}
+.burger__link:hover {
+  opacity: 0.5;
+}
+.burger__text {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: -0.48px;
+  opacity: 0.5;
+  color: #000;
+}
+.burger__contacts {
+  display: flex;
+  flex-direction: column;
+}
+.burger__phone,
+.burger__mail {
+  font-size: 20px;
+  line-height: 45px;
+  letter-spacing: -0.6px;
+  text-decoration: none;
+  color: var(--Text, #121212);
+}
+@media (max-width: 961px) {
+  .burger-btn {
+    position: absolute;
+    display: block;
+    top: 5px;
+    right: 0px;
+    z-index: 100;
+    width: 50px;
+    height: 10px;
+    background: url(../resources/burger-line.svg);
+    background-repeat: no-repeat;
+  }
+  .burger-btn_open {
+    width: 25px;
+    height: 25px;
+    right: 10px;
+    top: 0px;
+    cursor: pointer;
+    background: url(../resources/ic-close.png);
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 576px) {
+  .burger-btn {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    display: block;
+    width: 38px;
+    height: 10px;
+    background: url(../resources/burger-line1.jpg);
+    background-repeat: no-repeat;
+  }
+  .burger-btn_open {
+    width: 25px;
+    height: 25px;
+    right: 10px;
+    top: 0px;
+    background: url(../resources/ic-close.png);
+    background-repeat: no-repeat;
+  }
+}
